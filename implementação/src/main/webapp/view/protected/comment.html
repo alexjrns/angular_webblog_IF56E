@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="commentsAPP">
+    <head>
+        <title>Inserir um comentário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="view/resources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <script src="view/resources/scripts/angular.min.js" type="text/javascript"></script>
+        <script src="view/resources/scripts/angular-route.min.js" type="text/javascript"></script>
+        <script src="view/resources/scripts/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="view/resources/scripts/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="view/resources/scripts/bootstrap.js" type="text/javascript"></script>
+    </head>
+    <body ng-controller="CommentsController as controller">
+        <script src="controller/CommentsController.js" type="text/javascript"></script>
+        <div class="container">
+            <div class="">
+                <input ng-model="controller.comment"
+                   type="text" name="comment" value=""
+                   class="form-control"
+                   autocomplete="off" />
+                <button ng-click="controller.doComment()" class="btn btn-primary">Inserir comentário <span class="glyphicon glyphicon-ok"></span></button>
+            </div>
+        </div>
+    </body>
+</html>
